@@ -1,0 +1,80 @@
+# ------------------------------
+# Python cache / compiled files
+# ------------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ------------------------------
+# Virtual Environments
+# ------------------------------
+.env
+.venv/
+venv/
+ENV/
+env/
+
+# ------------------------------
+# Jupyter & notebooks
+# ------------------------------
+.ipynb_checkpoints/
+
+# ------------------------------
+# IDE / Editor files
+# ------------------------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ------------------------------
+# OS-specific files
+# ------------------------------
+.DS_Store
+Thumbs.db
+
+# ------------------------------
+# Logs
+# ------------------------------
+*.log
+logs/
+
+# ------------------------------
+# Data (session/user data)
+# ------------------------------
+data/sessions/
+data/processed/
+
+# Keep curated raw datasets (remove if storing large files)
+# data/raw/
+
+# ------------------------------
+# Demo / media
+# ------------------------------
+demo/
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.gif
+
+# ------------------------------
+# Python packaging
+# ------------------------------
+build/
+dist/
+*.egg-info/
+
+# ------------------------------
+# Secrets / keys
+# ------------------------------
+.env*
+*.token
+credentials.json
+secrets.json
+
+# ------------------------------
+# Misc
+# ------------------------------
+*.sqlite3
