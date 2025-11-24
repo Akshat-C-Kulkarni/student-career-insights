@@ -45,6 +45,7 @@ logs/
 # ------------------------------
 data/sessions/
 data/processed/
+data/raw/
 
 # Keep curated raw datasets (remove if storing large files)
 # data/raw/
