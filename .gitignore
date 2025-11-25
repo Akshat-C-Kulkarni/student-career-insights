@@ -43,6 +43,7 @@ logs/
 # ------------------------------
 # Data (session/user data)
 # ------------------------------
+data/
 data/sessions/
 data/processed/
 data/raw/
