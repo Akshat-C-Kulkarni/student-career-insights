@@ -35,3 +35,8 @@ If OpenRouter fails or rate limits are hit:
 - Use templated rule-based responses
 - Use dataset-driven responses (skills, roadmap, projects)
 - Avoid dependency on LLM for critical functions
+
+## Rate limits & quotas (notes)
+- OpenRouter free-tier may have rate limits or hourly quotas. Monitor responses for HTTP 429 or 503.
+- Our backend uses simple retry + exponential backoff (2 retries). In production, improve with queuing or throttling.
+- Always store API keys in environment variables. Do NOT commit API keys or .env files.
