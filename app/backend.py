@@ -99,11 +99,32 @@ def get_intent(message: str) -> str:
 # ---------------------------------------
 # Role extraction
 # ---------------------------------------
-def extract_role_from_text(message: str) -> Optional[str]:
+def extract_role_from_text(message: str):
     msg = (message or "").lower()
+
+    # Abbreviation mapping
+    role_aliases = {
+        "ml engineer": "Machine Learning Engineer",
+        "mle": "Machine Learning Engineer",
+        "data sci": "Data Scientist",
+        "frontend dev": "Frontend Developer",
+        "backend dev": "Backend Developer",
+        "full stack dev": "Full Stack Developer",
+        "ui ux": "UI/UX Designer",
+        "cybersec": "Cybersecurity Analyst",
+        "cloud eng": "Cloud Engineer",
+    }
+
+    # Check aliases first
+    for alias, full_role in role_aliases.items():
+        if alias in msg:
+            return full_role
+
+    # Fall back to full name detection
     for role in ROLE_DATA.keys():
         if role.lower() in msg:
             return role
+
     return None
 
 # ---------------------------------------
